@@ -39,3 +39,10 @@ vim.keymap.set("n", "]h", ":Gitsigns next_hunk<CR>", { silent = true })
 vim.keymap.set("n", "gph", ":Gitsigns preview_hunk<CR>", { silent = true })
 vim.keymap.set({ "n", "v" }, "gsh", ":Gitsigns stage_hunk<CR>", { silent = true })
 vim.keymap.set({ "n", "v" }, "grh", ":Gitsigns reset_hunk<CR>", { silent = true })
+
+-- Diffview git
+-- Diffview git
+vim.keymap.set("n", "dvc", ":DiffviewClose<CR>", { silent = true })
+vim.keymap.set("n", "dvo", ":DiffviewOpen<CR>", { silent = true })
+vim.keymap.set("n", "dvh", ":DiffviewFileHistory %<CR>", { silent = true })
+vim.keymap.set("n", "dvH", ":DiffviewFileHistory<CR>", { silent = true })
