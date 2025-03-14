@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
+vim.keymap.set("i", "kj", "<ESC>", { noremap = true })
+
 -- Gitsigns
 -- Gitsigns
 vim.keymap.set("n", "[h", ":Gitsigns prev_hunk<CR>", { silent = true })
