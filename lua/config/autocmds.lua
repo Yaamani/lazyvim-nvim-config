@@ -44,3 +44,16 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end
   end,
 })
+
+-- Jenkinsfile
+-- Jenkinsfile
+-- augroup set_jenkins_groovy
+-- au!
+-- au BufNewFile,BufRead *.jenkinsfile,*.Jenkinsfile,Jenkinsfile,jenkinsfile setf groovy
+-- augroup END
+local jenkinsfile_groovy_file_group = vim.api.nvim_create_augroup('SetJenkinsfileGroovy', { clear = true })
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  group = jenkinsfile_groovy_file_group,
+  pattern = { '*.jenkinsfile', '*.Jenkinsfile', 'Jenkinsfile', 'jenkinsfile' },
+  command = 'setf groovy',
+})
