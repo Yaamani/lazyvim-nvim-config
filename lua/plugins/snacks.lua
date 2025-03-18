@@ -10,5 +10,8 @@ return {
         easing = "outSine",
       },
     },
+    dashboard = {
+      enabled = false,
+    }
   },
 }
