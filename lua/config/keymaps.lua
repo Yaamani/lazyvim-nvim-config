@@ -46,3 +46,13 @@ vim.keymap.set("n", "dvc", ":DiffviewClose<CR>", { silent = true })
 vim.keymap.set("n", "dvo", ":DiffviewOpen<CR>", { silent = true })
 vim.keymap.set("n", "dvh", ":DiffviewFileHistory %<CR>", { silent = true })
 vim.keymap.set("n", "dvH", ":DiffviewFileHistory<CR>", { silent = true })
+
+-- suda
+-- suda
+require("../plugins/vim-suda")
+if SudaEnabled then
+  vim.api.nvim_command("ASToggle")
+  vim.api.nvim_set_keymap('n', '<C-s>', ':SudaWrite<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:SudaWrite<CR>i', { noremap = true })
+  vim.api.nvim_set_keymap('v', '<C-s>', ':<C-u>SudaWrite<CR>', { noremap = true })
+end
