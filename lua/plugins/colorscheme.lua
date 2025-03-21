@@ -42,6 +42,8 @@ return {
           -- ['@type'] = { fg = vsc.vscBlueGreen, bg = vsc.vscNone },
           -- ['@type.builtin'] = { fg = vsc.vscBlueGreen, bg = vsc.vscNone },
           -- ['@type.qualifier'] = { fg = vsc.vscBlueGreen, bg = vsc.vscNone },
+          ["Comment"] = { fg = vsc.vscGray, bg = vsc.vscNone, italic = true },
+          ["@comment"] = { fg = vsc.vscGray, bg = vsc.vscNone, italic = true },
           ["DiagnosticUnnecessary"] = { fg = "#888888", bg = vsc.vscNone, undercurl = true, sp = vsc.vscBlue },
           ["SpellBad"] = { undercurl = true, sp = vsc.vscBlueGreen },
           ["SpellCap"] = { undercurl = true, sp = vsc.vscGray },
