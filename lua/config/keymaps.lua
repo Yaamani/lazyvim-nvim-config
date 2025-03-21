@@ -2,8 +2,30 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Quality of life
+-- Quality of life
+
+--  jk & kj
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
 vim.keymap.set("i", "kj", "<ESC>", { noremap = true })
+
+-- end of line & start of line
+vim.keymap.set({ 'n', 'v', 'o' }, 'L', '$', { noremap = true })
+vim.keymap.set({ 'n', 'v', 'o' }, 'H', function()
+  local cursor_column_position = vim.api.nvim_win_get_cursor(0)[2]
+  local index_of_first_non_space_char = string.find(vim.api.nvim_get_current_line(), "%S")
+  if index_of_first_non_space_char == nil then return '0' end
+  if cursor_column_position < index_of_first_non_space_char then return '0' else return '^' end
+end, { noremap = true, expr = true })
+
+-- search
+vim.keymap.set('v', '//', 'y/<C-R>=substitute(escape(@", \'/\\.*$^~[\'), \'\\_s\\+\', \'\\\\_s\\\\+\', \'g\')<CR><CR>N',
+  { noremap = true })
+vim.keymap.set('v', '/c',
+  'y/\\C<C-R>=substitute(escape(@", \'/\\.*$^~[\'), \'\\_s\\+\', \'\\\\_s\\\\+\', \'g\')<CR><CR>Ncgn', { noremap = true })
+
+-- source
+vim.keymap.set('n', '<leader>x', ':so<CR>')
 
 -- Terminal
 -- Terminal
@@ -38,7 +60,7 @@ vim.keymap.set("n", "[h", ":Gitsigns prev_hunk<CR>", { silent = true })
 vim.keymap.set("n", "]h", ":Gitsigns next_hunk<CR>", { silent = true })
 vim.keymap.set("n", "gph", ":Gitsigns preview_hunk<CR>", { silent = true })
 vim.keymap.set({ "n", "v" }, "gsh", ":Gitsigns stage_hunk<CR>", { silent = true })
-vim.keymap.set({ "n", "v" }, "grh", ":Gitsigns reset_hunk<CR>", { silent = true })
+-- vim.keymap.set({ "n", "v" }, "grh", ":Gitsigns reset_hunk<CR>", { silent = true })
 
 -- Diffview git
 -- Diffview git
@@ -46,3 +68,10 @@ vim.keymap.set("n", "dvc", ":DiffviewClose<CR>", { silent = true })
 vim.keymap.set("n", "dvo", ":DiffviewOpen<CR>", { silent = true })
 vim.keymap.set("n", "dvh", ":DiffviewFileHistory %<CR>", { silent = true })
 vim.keymap.set("n", "dvH", ":DiffviewFileHistory<CR>", { silent = true })
+
+-- Bufferline
+-- Bufferline
+vim.keymap.set('n', jit.os ~= "OSX" and '<A-h>' or '˙', ':BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = "Prev buffer" })
+vim.keymap.set('n', jit.os ~= "OSX" and '<A-l>' or '¬', ':BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = "Next buffer" })
+vim.keymap.set('n', '<A-left>', ':BufferLineMovePrev<cr>', { noremap = true, silent = true, desc = "Move buffer prev" })
+vim.keymap.set('n', '<A-right>', ':BufferLineMoveNext<cr>', { noremap = true, silent = true, desc = "Move buffer next" })
