@@ -17,3 +17,9 @@ vim.g.startify_lists = {
   { ['type'] = 'bookmarks', ['header'] = {'   Bookmarks'} },
   { ['type'] = 'commands',  ['header'] = {'   Commands'} },
 }
+
+-- suda
+require("../plugins/vim-suda")
+if SudaEnabled then
+  vim.g["suda#noninteractive"] = 1
+end

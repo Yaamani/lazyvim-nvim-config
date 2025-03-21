@@ -75,3 +75,13 @@ vim.keymap.set('n', jit.os ~= "OSX" and '<A-h>' or '˙', ':BufferLineCyclePrev<c
 vim.keymap.set('n', jit.os ~= "OSX" and '<A-l>' or '¬', ':BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = "Next buffer" })
 vim.keymap.set('n', '<A-left>', ':BufferLineMovePrev<cr>', { noremap = true, silent = true, desc = "Move buffer prev" })
 vim.keymap.set('n', '<A-right>', ':BufferLineMoveNext<cr>', { noremap = true, silent = true, desc = "Move buffer next" })
+
+-- suda
+-- suda
+require("../plugins/vim-suda")
+if SudaEnabled then
+  vim.api.nvim_command("ASToggle")
+  vim.api.nvim_set_keymap('n', '<C-s>', ':SudaWrite<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:SudaWrite<CR>i', { noremap = true })
+  vim.api.nvim_set_keymap('v', '<C-s>', ':<C-u>SudaWrite<CR>', { noremap = true })
+end
