@@ -5,6 +5,9 @@
 -- disable autoformat on save
 vim.g.autoformat = false
 
+-- ai_cmp
+vim.g.ai_cmp = false
+
 -- startify
 -- startify
 vim.g.startify_session_persistence = 1
