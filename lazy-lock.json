@@ -5,7 +5,6 @@
   "blink.cmp": { "branch": "main", "commit": "dcda20d3aa345025699a920c45b0a0603551f41d" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
-  "codeium.nvim": { "branch": "main", "commit": "2b10c17c46e43154ebd058f6b3d3842dd8fa7cab" },
   "conform.nvim": { "branch": "master", "commit": "db8a4a9edb217067b1d7a2e0362c74bfe9cc944d" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "dropbar.nvim": { "branch": "master", "commit": "d08bf6b5e2b3bf160050b0f991c1831bf05a7523" },
@@ -45,5 +44,6 @@
   "vim-startify": { "branch": "master", "commit": "4e089dffdad46f3f5593f34362d530e8fe823dcf" },
   "vim-suda": { "branch": "master", "commit": "9adda7d195222d4e2854efb2a88005a120296c47" },
   "vscode.nvim": { "branch": "main", "commit": "3faeb317dab9db5d2310b2dc6472632399ead88f" },
-  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
+  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
+  "windsurf.nvim": { "branch": "main", "commit": "9569c9095a70370849345c861cdb2b06c4cadac7" }
 }
