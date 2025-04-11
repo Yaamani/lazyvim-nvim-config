@@ -7,9 +7,9 @@ return {
   config = function()
     require("codeium").setup({
       enable_cmp_source = vim.g.ai_cmp,
-      map_keys = false, -- I mapped the keys myself in config/keymaps.lua
       virtual_text = {
         enabled = not vim.g.ai_cmp,
+        map_keys = false, -- I mapped the keys myself in config/keymaps.lua
       },
     })
   end,
