@@ -12,6 +12,9 @@ return {
         map_keys = false, -- I mapped the keys myself in config/keymaps.lua
       },
     })
+    require("codeium.util").get_newline = function()
+      return "\n"
+    end
   end,
   -- opts = function(_, opts)
   --   require("codeium.util").get_newline = function()
