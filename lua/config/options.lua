@@ -5,8 +5,13 @@
 -- disable autoformat on save
 vim.g.autoformat = false
 
+-- picker
+vim.g.lazyvim_picker = "telescope"
+
 -- ai_cmp
 vim.g.ai_cmp = false
+
+
 
 -- startify
 -- startify
