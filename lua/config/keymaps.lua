@@ -88,8 +88,8 @@ end
 
 -- Windsurf (Codeium)
 -- Windsurf (Codeium)
-vim.keymap.set("i", "<M-k>", require("codeium.virtual_text").accept, { silent = true, expr = true, script = true, nowait = true })
-vim.keymap.set("i", "<M-l>", require("codeium.virtual_text").accept_next_word, { silent = true, expr = true, script = true, nowait = true })
-vim.keymap.set("i", "<M-j>", require("codeium.virtual_text").accept_next_line, { silent = true, expr = true, script = true, nowait = true })
-vim.keymap.set("i", "<M-]>", function() require("codeium.virtual_text").cycle_completions(1) end, { silent = true })
-vim.keymap.set("i", "<M-[>", function() require("codeium.virtual_text").cycle_completions(-1) end, { silent = true })
+-- vim.keymap.set("i", "<M-k>", require("codeium.virtual_text").accept, { silent = true, expr = true, script = true, nowait = true })
+-- vim.keymap.set("i", "<M-l>", require("codeium.virtual_text").accept_next_word, { silent = true, expr = true, script = true, nowait = true })
+-- vim.keymap.set("i", "<M-j>", require("codeium.virtual_text").accept_next_line, { silent = true, expr = true, script = true, nowait = true })
+-- vim.keymap.set("i", "<M-]>", function() require("codeium.virtual_text").cycle_completions(1) end, { silent = true })
+-- vim.keymap.set("i", "<M-[>", function() require("codeium.virtual_text").cycle_completions(-1) end, { silent = true })
