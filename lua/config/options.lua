@@ -12,6 +12,8 @@ vim.g.lazyvim_picker = "telescope"
 vim.g.ai_cmp = false
 
 
+-- viminfo file to store command history, marks, etc.
+vim.o.viminfo = "'100,n$HOME/.viminfo"
 
 -- startify
 -- startify
