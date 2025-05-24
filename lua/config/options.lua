@@ -15,6 +15,7 @@ vim.g.ai_cmp = false
 
 -- startify
 -- startify
+vim.o.sessionoptions = "globals," .. vim.o.sessionoptions -- To save the sort order for bufferline (:help bufferline)
 vim.g.startify_session_persistence = 1
 -- vim.g.startify_change_to_dir = 0
 -- vim.g.startify_session_delete_buffers = 0
