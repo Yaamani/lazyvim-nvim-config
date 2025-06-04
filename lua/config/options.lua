@@ -29,6 +29,11 @@ vim.g.startify_lists = {
   { ['type'] = 'commands',  ['header'] = {'   Commands'} },
 }
 
+-- Spell
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
+vim.opt.spelloptions = 'camel'
+
 -- suda
 require("../plugins/vim-suda")
 if SudaEnabled then
