@@ -11,6 +11,9 @@ vim.g.lazyvim_picker = "telescope"
 -- ai_cmp
 vim.g.ai_cmp = false
 
+-- windows and splits
+vim.o.splitright = true
+vim.o.equalalways = false
 
 -- viminfo file to store command history, marks, etc.
 vim.o.viminfo = "'100,n$HOME/.viminfo"
