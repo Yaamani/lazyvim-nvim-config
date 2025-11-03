@@ -40,7 +40,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()))
     if ok and stats and stats.size < max_filesize then
       vim.opt.spell = true
-      require("illuminate").resume_buf()
+      if package.loaded["illuminate"] then
+        require("illuminate").resume_buf()
+      end
     end
   end,
 })
