@@ -11,6 +11,9 @@ return {
         hide_gitignored = false,
         hide_hidden = false, -- only works on Windows for hidden files/directories
       },
+      -- Disables the file watcher to prevent Windows from constantly 
+      -- triggering asynchronous redraws that reset your cursor.
+      use_libuv_file_watcher = false,
     },
   }
 }
