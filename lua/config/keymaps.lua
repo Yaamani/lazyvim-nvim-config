@@ -49,7 +49,7 @@ vim.keymap.set("n", jit.os ~= "OSX" and "<A-t>p" or "†p", ":tabprevious<CR>")
 
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { noremap = true })
 vim.keymap.set("t", "kj", "<C-\\><C-n>", { noremap = true })
-vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
+-- vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
