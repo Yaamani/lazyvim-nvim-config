@@ -1,6 +1,21 @@
 return {
   "sindrets/diffview.nvim",
   opts = {
+    hooks = {
+      view_opened = function(view)
+        local previous_tabnr = vim.fn.tabpagenr("#")
+        local tabs = vim.api.nvim_list_tabpages()
+        view.origin_tabpage = tabs[previous_tabnr]
+      end,
+      view_closed = function(view)
+        local origin_tabpage = view.origin_tabpage
+        vim.schedule(function()
+          if origin_tabpage and vim.api.nvim_tabpage_is_valid(origin_tabpage) then
+            vim.api.nvim_set_current_tabpage(origin_tabpage)
+          end
+        end)
+      end,
+    },
     view = {
       -- Configure the layout and behavior of different types of views.
       -- Available layouts:
