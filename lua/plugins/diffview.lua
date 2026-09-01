@@ -44,5 +44,13 @@ return {
         winbar_info = false, -- See |diffview-config-view.x.winbar_info|
       },
     },
+    file_panel = {
+      win_config = {
+        win_opts = {
+          number = true,
+          relativenumber = true,
+        },
+      },
+    },
   },
 }
